@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Wraps the supplied company logo (k_logo.png) for the adaptive launcher icon.
+     gravity="center" shows it at its true proportions (no stretching/distortion). -->
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/k_logo"
+    android:gravity="center" />

@@ -1,0 +1,25 @@
+How to generate the .apk file
+Easiest — Android Studio (debug APK, sideloadable):
+
+Top menu → Build → Build Bundle(s) / APK(s) → Build APK(s).
+Wait for the build; a notification "APK(s) generated successfully" appears at the bottom-right → click locate.
+It opens the folder with your file:
+D:\Claude\KING_WMS\KING WMS\app\build\outputs\apk\debug\app-debug.apk
+Or command line — open a normal PowerShell/Terminal in the project folder:
+
+cd "D:\Claude\KING_WMS\KING WMS"
+.\gradlew.bat assembleDebug
+Output: app\build\outputs\apk\debug\app-debug.apk.
+
+Install it on a phone:
+
+Copy app-debug.apk to the device, tap it, allow "Install unknown apps" for your file manager, install.
+Or with the phone connected via USB: adb install -r app-debug.apk.
+The debug APK is what you want for testing on warehouse devices — no signing setup needed. Set the server address via the new login gear (or in build.gradle.kts) so the device reaches your backend.
+
+Signed release APK (only if you later distribute via MDM and need a stable signature):
+
+Build → Generate Signed Bundle / APK → APK → create a keystore (keep it safe!) → release → Finish.
+Output: app\build\outputs\apk\release\app-release.apk.
+If you want, I can set up the release signing config in Gradle so .\gradlew.bat assembleRelease produces a signed APK directly — just say so.
+Before you build: since last turn added a backend endpoint, restart the backend (pnpm dev) so the Transfer "recent" list works; and as always, uninstall the old app first if you want the new K icon to refresh.

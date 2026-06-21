@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+      Internal warehouse LAN tool: cleartext HTTP is permitted to any host so the
+      backend address can be changed at runtime (Settings → Server). Use HTTPS in
+      production where possible. (Originally this was pinned to a single IP, but the
+      runtime "Server" setting needs to reach arbitrary LAN hosts.)
+    -->
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

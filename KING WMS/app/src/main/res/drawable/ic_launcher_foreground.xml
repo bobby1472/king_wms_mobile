@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Company logo: solid bold "K", filled black, flat ends — built as a stem +
+         upper arm + lower leg (union). Black on the white background to match the
+         brand mark exactly. -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M28,24 H44 V84 H28 Z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M42,46 L60,24 L82,24 L42,58 Z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M42,52 L66,84 L84,84 L42,66 Z" />
+</vector>

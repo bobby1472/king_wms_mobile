@@ -1,0 +1,10 @@
+<resources>
+    <color name="king_midnight">#0A1A2F</color>
+    <!-- Dark, no-action-bar shell. Midnight window background so launch doesn't flash
+         white before Compose draws; light status-bar icons (Material dark default). -->
+    <style name="Theme.KingWms" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/king_midnight</item>
+        <item name="android:statusBarColor">@color/king_midnight</item>
+        <item name="android:navigationBarColor">@color/king_midnight</item>
+    </style>
+</resources>
